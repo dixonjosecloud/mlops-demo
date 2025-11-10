@@ -23,3 +23,5 @@ jobs:
 
     - name: Run training
       run: python train_with_mlflow.py
+      env:
+        MLFLOW_TRACKING_URI: file:./mlruns
