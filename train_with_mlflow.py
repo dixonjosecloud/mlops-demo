@@ -1,3 +1,4 @@
+import os
 import mlflow
 import mlflow.sklearn
 from sklearn.datasets import load_diabetes
