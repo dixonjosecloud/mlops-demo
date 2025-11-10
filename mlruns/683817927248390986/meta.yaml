@@ -1,0 +1,6 @@
+artifact_location: file:///home/dixon/MLOPS/mlops-day2/mlruns/683817927248390986
+creation_time: 1762704534080
+experiment_id: '683817927248390986'
+last_update_time: 1762704534080
+lifecycle_stage: active
+name: diabetes_experiment

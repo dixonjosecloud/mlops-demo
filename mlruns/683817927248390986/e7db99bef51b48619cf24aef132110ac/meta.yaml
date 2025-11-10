@@ -1,0 +1,15 @@
+artifact_uri: file:///home/dixon/MLOPS/mlops-day2/mlruns/683817927248390986/e7db99bef51b48619cf24aef132110ac/artifacts
+end_time: 1762704539931
+entry_point_name: ''
+experiment_id: '683817927248390986'
+lifecycle_stage: active
+run_id: e7db99bef51b48619cf24aef132110ac
+run_name: dapper-stag-693
+run_uuid: e7db99bef51b48619cf24aef132110ac
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762704535296
+status: 3
+tags: []
+user_id: dixon

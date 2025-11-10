@@ -1,0 +1,15 @@
+artifact_uri: file:///home/dixon/MLOPS/mlops-day2/mlruns/683817927248390986/0d351c5812b9422a94690e7069f662e5/artifacts
+end_time: 1762704875843
+entry_point_name: ''
+experiment_id: '683817927248390986'
+lifecycle_stage: active
+run_id: 0d351c5812b9422a94690e7069f662e5
+run_name: indecisive-snail-571
+run_uuid: 0d351c5812b9422a94690e7069f662e5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762704872356
+status: 3
+tags: []
+user_id: dixon
