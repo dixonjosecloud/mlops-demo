@@ -1,16 +1,9 @@
-import os
 import mlflow
 import mlflow.sklearn
 from sklearn.datasets import load_diabetes
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
-
-# Start experiment tracking
-current_dir = os.getcwd()
-mlflow_dir = os.path.join(current_dir, "mlruns")
-os.environ["MLFLOW_TRACKING_URI"] = f"file:{mlflow_dir}"
-mlflow.set_tracking_uri(f"file:{mlflow_dir}")
 
 mlflow.set_experiment("diabetes_experiment")
 
