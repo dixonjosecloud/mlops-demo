@@ -14,7 +14,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 # force MLflow to write inside the repo
-mlflow.set_tracking_uri(f"file:{safe_home}/mlruns")
 mlflow.set_experiment("diabetes_experiment")
 
 with mlflow.start_run():
