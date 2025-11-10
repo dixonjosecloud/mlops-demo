@@ -22,4 +22,9 @@ jobs:
         pip install mlflow scikit-learn pandas numpy
 
     - name: Run training
-      run: python train_with_mlflow.py
+      env:
+        HOME: ${{ github.workspace }}        # force HOME into a writable dir
+        MLFLOW_TRACKING_URI: file:${{ github.workspace }}/mlruns
+      run: |
+        mkdir -p $MLFLOW_TRACKING_URI
+        python train_with_mlflow.py
