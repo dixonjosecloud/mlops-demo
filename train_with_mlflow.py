@@ -13,11 +13,6 @@ pathlib.Path(safe_home).mkdir(parents=True, exist_ok=True)
 
 print("Directory exists:", os.path.exists(safe_home))
 
-tmp_dir = "/tmp/mlruns"
-os.environ["MLFLOW_TRACKING_URI"] = f"file:{tmp_dir}"
-pathlib.Path(tmp_dir).mkdir(parents=True, exist_ok=True)
-mlflow.set_tracking_uri(f"file:{tmp_dir}")
-
 
 # --- now normal imports ---
 import mlflow
