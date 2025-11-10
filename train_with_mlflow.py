@@ -1,18 +1,9 @@
 import os, pathlib
 
-print("Current working directory:", os.getcwd())
-print("Home directory (before change):", os.path.expanduser("~"))
-
-# --- make sure Python never writes into /home/dixon  ---
-safe_home = os.getcwd()            # use the current working dir
-
-print("Home directory (after change):", os.path.expanduser("~"))
-
-os.environ["HOME"] = safe_home     # redefine home for this process
-pathlib.Path(safe_home).mkdir(parents=True, exist_ok=True)
-
-print("Directory exists:", os.path.exists(safe_home))
-
+# Always use /tmp for MLflow tracking on GitHub Actions
+mlruns_dir = "/tmp/mlruns"
+os.environ["MLFLOW_TRACKING_URI"] = f"file:{mlruns_dir}"
+pathlib.Path(mlruns_dir).mkdir(parents=True, exist_ok=True)
 
 # --- now normal imports ---
 import mlflow
