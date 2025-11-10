@@ -7,8 +7,11 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 # Start experiment tracking
-os.environ["MLFLOW_TRACKING_URI"] = "file:./mlruns"
-mlflow.set_tracking_uri("file:./mlruns")
+current_dir = os.getcwd()
+mlflow_dir = os.path.join(current_dir, "mlruns")
+os.environ["MLFLOW_TRACKING_URI"] = f"file:{mlflow_dir}"
+mlflow.set_tracking_uri(f"file:{mlflow_dir}")
+
 mlflow.set_experiment("diabetes_experiment")
 
 with mlflow.start_run():
